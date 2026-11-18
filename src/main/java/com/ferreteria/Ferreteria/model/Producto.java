@@ -1,6 +1,12 @@
 package com.ferreteria.Ferreteria.model;
 
+import jakarta.persistence.*;
+
+@Entity
+
 public class Producto {
+    @Id
+    @GeneratedValue(strategy  =GenerationType.IDENTITY)
     private Long codProducto;
     private String nombre;
     private String marca;
