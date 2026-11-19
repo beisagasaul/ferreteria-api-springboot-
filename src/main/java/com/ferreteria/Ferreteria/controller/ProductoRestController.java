@@ -2,20 +2,18 @@ package com.ferreteria.Ferreteria.controller;
 
 import com.ferreteria.Ferreteria.model.Producto;
 import com.ferreteria.Ferreteria.service.IProductoService;
-import jakarta.persistence.PrePersist;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.security.PublicKey;
 import java.util.List;
 
 @RestController
 @RequestMapping("api/productos")
-public class ProductoController {
+public class ProductoRestController {
     private final IProductoService prodServ;
 
-    public ProductoController(IProductoService prodServ) {
+    public ProductoRestController(IProductoService prodServ) {
         this.prodServ = prodServ;
     }
     //READ
